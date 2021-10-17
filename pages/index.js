@@ -12,8 +12,8 @@ export default function Home({covidData}) {
   const [Map, setMap] = useState();
   const { data, error } = useSWR("/api/liveMusic", fetcher);
 
-  console.log(covidData);
-  const totalUSCases = covidData.US.All.confirmed
+  // console.log(covidData);
+  // const totalUSCases = covidData.US.All.confirmed
 
   if (error) console.error(error);
  
@@ -63,7 +63,7 @@ export default function Home({covidData}) {
           <div className="text-2xl font-bold px-5 pt-4 mb-5">Covid Updates</div>
           <div className="px-5 py-3 mb-5">
             <div className="mb-2 text-gray-400">United States of America</div>
-           <h2 className=" text-lg font-extrabold text-red-700">{ Number(totalUSCases.toFixed(0)).toLocaleString().split(/\s/).join(',')}</h2> 
+           <h2 className=" text-lg font-extrabold text-red-700">{/* Number(totalUSCases.toFixed(0)).toLocaleString().split(/\s/).join(',') */}</h2> 
           </div>
         </div>
       </main>
