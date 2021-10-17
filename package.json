@@ -13,5 +13,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "swr": "^0.3.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }

@@ -24,14 +24,12 @@ export default function Home() {
 
     let map = new mapboxgl.Map({
       container: "my-map",
-      style: "mapbox://styles/mapbox/streets-v11",
+      /*https://docs.mapbox.com/api/maps/styles/*/
+      style: "mapbox://styles/mapbox/dark-v10",
       center: [-77.02, 38.887],
       zoom: 12.5,
       pitch: 45,
-      maxBounds: [
-        [-77.875588, 38.50705], // Southwest coordinates
-        [-76.15381, 39.548764], // Northeast coordinates
-      ],
+     
     });
 
     initializeMap(mapboxgl, map);
@@ -49,7 +47,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Covid Updates</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
@@ -58,19 +56,11 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div id="my-map" style={{ height: 500, width: 500 }} />
+        <div className="rounded-lg shadow-xl">
+        <div className="rounded-xl" style={{height:400, width:500}} id="my-map"  />
+        </div>
+        
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   );
 }
